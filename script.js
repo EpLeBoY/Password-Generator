@@ -1,7 +1,7 @@
 function saveNote() {
 	let note = document.getElementById('note').value;
 	localStorage.setItem('note', note);
-	alert('Nota salvata con successo!');
+	alert('Nota salvata con successo!                                                                  Questa nota rimarrà qua anche se chiudi e riapri la scheda/ricarichi la pagina.');
 }
 
 function saveNoteAs() {
@@ -56,3 +56,24 @@ window.onload = function() {
 	}
 	displaySavedNotes();
 }
+
+
+const shareBtn = document.getElementById('shareBtn')
+
+shareBtn.addEventListener('click', event => {
+
+  // Check for Web Share api support
+  if (navigator.share) {
+    // Browser supports native share api
+    navigator.share({
+      text: 'Condividi questa pagina',
+      url: 'https://epleboy.github.io/bolck-notes-alpha/'
+    }).then(() => {
+      console.log('Grazie per la condivisione!');
+    })
+      .catch((err) => console.error(err));
+  } else {
+    // Fallback
+    alert("Cambia Browser! Questa funzione non è disponibile, per condividere copia il link")
+  }
+});
