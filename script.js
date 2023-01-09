@@ -67,7 +67,7 @@ shareBtn.addEventListener('click', event => {
     // Browser supports native share api
     navigator.share({
       text: 'Condividi questa pagina',
-      url: 'https://epleboy.github.io/bolck-notes-alpha/'
+      url: 'https://epleboy.github.io/bolck-notes-beta-v.0.3/'
     }).then(() => {
       console.log('Grazie per la condivisione!');
     })
