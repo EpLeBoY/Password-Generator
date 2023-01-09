@@ -1,7 +1,7 @@
 function saveNote() {
 	let note = document.getElementById('note').value;
 	localStorage.setItem('note', note);
-	alert('Nota salvata con successo!                                                                  Questa nota rimarrà qua anche se chiudi e riapri la scheda/ricarichi la pagina.');
+	alert('Nota salvata con successo!                                                                   Questa nota rimarrà qua anche se chiudi e riapri la scheda/ricarichi la pagina.');
 }
 
 function saveNoteAs() {
